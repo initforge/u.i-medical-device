@@ -529,7 +529,7 @@
 .floating-buttons {
     position: fixed;
     bottom: var(--spacing-lg);
-    right: var(--spacing-lg);
+    left: var(--spacing-lg);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -547,6 +547,7 @@
     font-size: 1.5rem;
     box-shadow: var(--shadow-lg);
     transition: all var(--transition);
+    position: relative;
 }
 
 .floating-btn:hover {
@@ -556,6 +557,7 @@
 
 .floating-btn.zalo {
     background: #0068FF;
+    animation: pulse-blue 2s infinite;
 }
 
 .floating-btn.messenger {
@@ -564,12 +566,28 @@
 
 .floating-btn.phone {
     background: var(--success);
-    animation: pulse 2s infinite;
+    animation: pulse-green 2s infinite;
 }
 
-@keyframes pulse {
+/* Pulse animation for Zalo */
+@keyframes pulse-blue {
     0% {
-        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+        box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 104, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 104, 255, 0);
+    }
+}
+
+/* Pulse animation for Phone */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.5);
     }
 
     70% {
