@@ -2,9 +2,9 @@
    HEADER COMPONENT
    ============================================ */
 
-/* Top Bar - Matches nav bar color like reference site */
+/* Top Bar */
 .top-bar {
-    background: var(--primary);
+    background: var(--gray-800);
     color: var(--white);
     height: var(--top-bar-height);
     font-size: 0.875rem;
@@ -24,7 +24,7 @@
 }
 
 .top-bar-left a {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray-300);
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
@@ -48,20 +48,20 @@
 .top-bar-right .social-links a {
     width: 28px;
     height: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray-300);
     font-size: 0.875rem;
     transition: all var(--transition-fast);
 }
 
 .top-bar-right .social-links a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: var(--white);
     color: var(--white);
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Main Header */
@@ -69,9 +69,8 @@
     background: var(--white);
     height: var(--header-height);
     box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative;
+    z-index: 100;
 }
 
 .main-header .container {
@@ -110,57 +109,47 @@
     color: var(--text-primary);
 }
 
-/* Header Search - Pill shape like reference site */
+/* Header Search */
 .header-search {
     flex: 1;
     max-width: 500px;
-    position: relative;
+    display: flex;
     margin: 0 var(--spacing-xl);
 }
 
 .search-input {
-    width: 100%;
-    padding: 14px 50px 14px 24px;
-    border: 1px solid var(--gray-300);
-    border-radius: var(--radius-full);
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid var(--gray-300);
+    border-right: none;
+    border-radius: var(--radius-full) 0 0 var(--radius-full);
     font-size: 0.9375rem;
     outline: none;
-    transition: border-color var(--transition), box-shadow var(--transition);
+    transition: border-color var(--transition);
 }
 
 .search-input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px var(--primary-bg);
 }
 
-.search-input::placeholder {
-    color: var(--gray-400);
-}
-
-/* Search icon inside the input - like reference site */
 .search-btn {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    padding: 0;
+    padding: 12px 20px;
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: background var(--transition);
+}
+
+.search-btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .search-btn .icon {
     width: 20px;
     height: 20px;
-    color: var(--gray-500);
-    transition: color var(--transition-fast);
-}
-
-.search-btn:hover .icon {
-    color: var(--primary);
+    color: var(--white);
 }
 
 /* Header Info */
@@ -185,6 +174,32 @@
     display: block;
     font-size: 1rem;
     color: var(--primary);
+}
+
+/* Header Info - 2 Line Layout */
+.header-info .info-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.header-info .info-line {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color var(--transition-fast);
+}
+
+.header-info .info-line:hover {
+    color: var(--primary);
+}
+
+.header-info .info-line.highlight {
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 /* Navigation Bar */
@@ -272,15 +287,16 @@
     border-bottom: none;
 }
 
-/* Hotline Badge - Dark background like reference site (#361206 → #1a3a5c for blue theme) */
+/* Hotline Badge - Vertical Box Layout */
 .nav-hotline {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #1a3a5c;
-    padding: 10px 30px;
-    min-height: 56px;
+    background: #2d2a26;
+    border-radius: var(--radius);
+    padding: 8px 20px;
+    min-height: 52px;
 }
 
 .hotline-label {
@@ -289,14 +305,14 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 2px;
+    line-height: 1;
 }
 
 .hotline-number {
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
 /* Navigation */
