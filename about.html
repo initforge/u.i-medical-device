@@ -86,7 +86,7 @@
         </svg>
     </div>
 
-    <!-- Top Bar -->
+    <!-- Top Bar (Contact Info) -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-left">
@@ -98,7 +98,6 @@
                     </svg> info@example.com</a>
             </div>
             <div class="top-bar-right">
-                <span>Hỗ trợ 24/7</span>
                 <div class="social-links">
                     <a href="#"><svg class="icon icon-sm">
                             <use href="#icon-facebook"></use>
@@ -114,7 +113,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Main Header (Logo + Search) -->
     <header class="main-header">
         <div class="container">
             <a href="/" class="logo">
@@ -123,30 +122,73 @@
                     </svg></div>
                 <div class="logo-text">ABC<span>Medical</span></div>
             </a>
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="/" class="nav-link">Trang chủ</a></li>
-                    <li class="nav-item">
-                        <a href="/about.html" class="nav-link active">Giới thiệu <svg class="icon icon-sm arrow">
-                                <use href="#icon-arrow-down"></use>
-                            </svg></a>
-                        <div class="dropdown">
-                            <a href="#vision" class="dropdown-link">Tầm nhìn - Sứ mệnh</a>
-                            <a href="#history" class="dropdown-link">Lịch sử phát triển</a>
-                            <a href="#team" class="dropdown-link">Đội ngũ đồng hành</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="/products.html" class="nav-link">Sản phẩm</a></li>
-                    <li class="nav-item"><a href="/news.html" class="nav-link">Tin tức</a></li>
-                    <li class="nav-item"><a href="/contact.html" class="nav-link">Liên hệ</a></li>
-                </ul>
-            </nav>
-            <div class="header-cta hide-mobile">
-                <a href="/contact.html" class="btn btn-primary">Liên Hệ Báo Giá</a>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <input type="text" placeholder="Nhập sản phẩm bạn cần tìm..." class="search-input">
+                <button class="search-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
             </div>
+
+            <!-- Right Side Info -->
+            <div class="header-info hide-mobile">
+                <div class="info-item">
+                    <svg class="icon icon-lg icon-primary">
+                        <use href="#icon-target"></use>
+                    </svg>
+                    <div>
+                        <span>Hỗ trợ kỹ thuật</span>
+                        <strong>24/7</strong>
+                    </div>
+                </div>
+            </div>
+
             <button class="mobile-menu-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
         </div>
     </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="container">
+            <ul class="nav-list" id="mainNav">
+                <li class="nav-item"><a href="/" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="/about.html" class="nav-link active">Giới thiệu <svg class="icon icon-sm arrow">
+                            <use href="#icon-arrow-down"></use>
+                        </svg></a>
+                    <div class="dropdown">
+                        <a href="#vision" class="dropdown-link">Tầm nhìn - Sứ mệnh</a>
+                        <a href="#history" class="dropdown-link">Lịch sử phát triển</a>
+                        <a href="#team" class="dropdown-link">Đội ngũ đồng hành</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="/products.html" class="nav-link">Sản phẩm <svg class="icon icon-sm arrow">
+                            <use href="#icon-arrow-down"></use>
+                        </svg></a>
+                    <div class="dropdown">
+                        <a href="/products.html?cat=sieu-am" class="dropdown-link">Máy siêu âm</a>
+                        <a href="/products.html?cat=xet-nghiem" class="dropdown-link">Thiết bị xét nghiệm</a>
+                        <a href="/products.html?cat=dien-tim" class="dropdown-link">Máy điện tim</a>
+                        <a href="/products.html?cat=gay-me" class="dropdown-link">Máy gây mê</a>
+                        <a href="/products.html?cat=noi-soi" class="dropdown-link">Máy nội soi</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/news.html" class="nav-link">Tin tức</a></li>
+                <li class="nav-item"><a href="/contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+
+            <!-- Hotline Badge -->
+            <div class="nav-hotline">
+                <span class="hotline-label">HOTLINE</span>
+                <a href="tel:096XXXXXXX" class="hotline-number">096.55.88.369</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
