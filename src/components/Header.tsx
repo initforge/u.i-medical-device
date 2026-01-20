@@ -51,12 +51,7 @@ export default function Header() {
             <header className="main-header">
                 <div className="container">
                     <Link href="/" className="logo">
-                        <div className="logo-icon">
-                            <svg className="icon icon-lg icon-white">
-                                <use href="#icon-medical"></use>
-                            </svg>
-                        </div>
-                        <div className="logo-text">ABC<span>Medical</span></div>
+                        <img src="/images/logo.png" alt="Huynh Van Medical" className="logo-img" />
                     </Link>
 
                     {/* Search Bar */}

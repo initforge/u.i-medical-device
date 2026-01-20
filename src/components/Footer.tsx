@@ -3,15 +3,14 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-            {/* Newsletter */}
+            {/* Newsletter - Dark brown background */}
             <div className="newsletter-bar">
                 <div className="container">
                     <div className="newsletter-text">
-                        <h4>Đăng ký nhận thông tin</h4>
-                        <p>Nhận thông tin khuyến mãi và sản phẩm mới nhất</p>
+                        <span>Nhập Email để nhận thông tin khuyến mãi từ ABC Medical</span>
                     </div>
                     <form className="newsletter-form">
-                        <input type="email" placeholder="Nhập email của bạn..." required />
+                        <input type="email" placeholder="Email thường dùng" required />
                         <button type="submit" className="btn btn-primary">Đăng ký</button>
                     </form>
                 </div>
