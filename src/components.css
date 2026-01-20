@@ -619,11 +619,21 @@
 
 .contact-item {
     text-align: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition);
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
 .contact-item .icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     background: var(--primary-bg);
     border-radius: var(--radius-full);
     display: flex;
@@ -631,22 +641,36 @@
     justify-content: center;
     margin: 0 auto var(--spacing-md);
     color: var(--primary);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    transition: all var(--transition);
+}
+
+.contact-item:hover .icon {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
 }
 
 .contact-item h5 {
     margin-bottom: var(--spacing-xs);
     color: var(--text-primary);
+    font-size: 1rem;
 }
 
 .contact-item p {
     color: var(--text-secondary);
     font-size: 0.875rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .contact-item a {
     color: var(--primary);
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contact-item:hover a {
+    text-decoration: underline;
 }
 
 /* Copyright */
